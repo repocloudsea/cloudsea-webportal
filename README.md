@@ -1,10 +1,12 @@
 # CloudCampus
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
+To setup project follow below steps -
 
-## Install Packages
-
-Run 'npm install'
+1) Install Node.js
+2) Go to the project directory
+3) Run 'npm install'
+4) Run 'npm inatall -g @angular/cli'
+5) Run 'ng serve'
 
 ## Development server
 
