@@ -1,5 +1,8 @@
 # CloudCampus
 
+![](https://reposs.herokuapp.com/?path=CocoaPods/Specs)
+[![Build Status](https://travis-ci.org/repocloudsea/cloudsea-portal.svg?branch=master)](https://travis-ci.org/repocloudsea/cloudsea-portal)
+
 To setup project follow below steps -
 
 1) Install Node.js
