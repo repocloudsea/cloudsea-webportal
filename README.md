@@ -1,7 +1,7 @@
 # CloudCampus
 
 ![](https://reposs.herokuapp.com/?path=CocoaPods/Specs)
-[![Build Status](https://travis-ci.org/repocloudsea/cloudsea-portal.svg?branch=master)](https://travis-ci.org/repocloudsea/cloudsea-portal)
+[![Build Status](https://travis-ci.org/repocloudsea/cloudsea-webportal.svg?branch=master)](https://travis-ci.org/repocloudsea/cloudsea-cloudsea-webportal)
 
 To setup project follow below steps -
 
