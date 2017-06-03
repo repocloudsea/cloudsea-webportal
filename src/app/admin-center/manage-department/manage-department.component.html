@@ -7,7 +7,10 @@
     <a class="app-link">Admin Center</a>
   </li>
   <li routerLink="/admin/manage">
-    <a class="active app-link">Manage Data</a>
+    <a class="app-link">Manage Data</a>
+  </li>
+  <li routerLink="/admin/manage/department">
+    <a class="active app-link">Manage Department</a>
   </li>
 </ul>
 <!-- BreadCrumb ends -->
@@ -17,55 +20,76 @@
   <!-- Form Starts -->
   <div class="col-sm-4">
     <div class="panel panel-default">
+      <div class="panel-heading separator">
+        <div class="panel-title">Add Department</div>
+      </div>
       <div class="panel-body">
-        <form role="form">
-    
-    <div class="form-group form-group-default ">
-        <label>Project</label>
-        <input type="email" class="form-control" required>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group form-group-default">
-                <label>First name</label>
+        <br/>
+        <form role="form" novalidate>
+            <div class="form-group form-group-default ">
+                <label>Name</label>
                 <input type="text" class="form-control" required>
             </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group form-group-default">
-                <label>Last name</label>
-                <input type="text" class="form-control">
+            <div class="form-group form-group-default ">
+                <label>Code</label>
+                <input type="text" class="form-control" required>
             </div>
-        </div>
-    </div>
-
-    <div class="form-group form-group-default">
-        <label>Password</label>
-        <input type="password" class="form-control" required>
-    </div>
-
-    <div class="form-group form-group-default">
-        <label>Placeholder</label>
-        <input type="email" class="form-control" placeholder="ex: some@example.com" required>
-    </div>
-
-    <div class="form-group form-group-default disabled">
-        <label>Disabled</label>
-        <input type="email" class="form-control" value="You can put anything here" disabled>
-    </div>
-</form>
+            <div class="form-group form-group-default ">
+                <label>Effective From</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="p-t-10">
+                <button class="btn btn-cons btn-rounded btn-danger btn-animated from-left fa fa-trash-o pull-left">
+                    <span>Delete</span>
+                </button>
+                <button class="btn btn-cons btn-rounded btn-success btn-animated from-left fa fa-check pull-right">
+                    <span>Save</span>
+                </button>
+            </div>
+        </form>
       </div>
     </div>
   </div>
   <!-- Form Ends -->
 
-  <!-- Object Listing Starts -->
   <div class="col-sm-8">
     <!-- Search Bar Starts-->
     <app-search-bar></app-search-bar>
     <!-- Search Bar Ends-->
+
+    <!-- Object Listing Starts -->
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-default bg-danger app-floter app-pointer">
+                <div class="panel-body text-center semi-bold fs-14 text-white">
+                    Computer Sicence
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="panel panel-default bg-danger app-floter app-pointer">
+                <div class="panel-body text-center semi-bold fs-14 text-white">
+                    Information Technology
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-default bg-danger app-floter app-pointer">
+                <div class="panel-body text-center semi-bold fs-14 text-white">
+                    Electronics & Tele-Com
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-default bg-danger app-floter app-pointer">
+                <div class="panel-body text-center semi-bold fs-14 text-white">
+                    Machanical
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Object Listing Ends -->
   </div>
-  <!-- Object Listing Ends -->
 </div>
 <!-- Body Ends -->
