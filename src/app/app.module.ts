@@ -6,10 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { NotFoundComponent } from './shared/errors/not-found/not-found.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { DashboardComponent } from './shared/dashboard/dashboard.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { NotFoundComponent } from './core/errors/not-found/not-found.component';
+import { HeaderComponent } from './core/header/header.component';
+import { DashboardComponent } from './core/dashboard/dashboard.component';
+import { FooterComponent } from './core/footer/footer.component';
 
 @NgModule({
   declarations: [

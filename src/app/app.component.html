@@ -3,17 +3,21 @@
       <div id="appMenu" class="sidebar-overlay-slide from-top"></div>
       <div class="sidebar-menu m-t-90">
         <ul class="menu-items">
-          <li class="active" routerLink="/dashboard">
+          <li routerLinkActive="active">
             <a href="#">
               <span class="title">Dashboard</span>
             </a>
-            <span class="icon-thumbnail"><i class="pg-home"></i></span>
+            <span class="icon-thumbnail app-link" routerLink="/dashboard">
+              <i class="pg-home"></i>
+            </span>
           </li>
-          <li class="" routerLink="/admin/dashboard">
+          <li routerLinkActive="active">
             <a href="#">
               <span class="title">Admin Center</span>
             </a>
-            <span class="icon-thumbnail"><i class="pg-grid"></i></span>
+            <span class="icon-thumbnail app-link" routerLink="/admin/dashboard">
+              <i class="pg-grid"></i>
+            </span>
           </li>
         </ul>
         <div class="clearfix"></div>

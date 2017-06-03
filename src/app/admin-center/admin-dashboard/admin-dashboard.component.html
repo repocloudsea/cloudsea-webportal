@@ -1,30 +1,19 @@
 <ul class="breadcrumb">
   <li class="app-link" routerLink="/dashboard">
-    DashBoard
+    <p>DashBoard</p>
   </li>
-  <li>
-    <a href   class="active">Admin Center</a>
+  <li routerLink="/admin/dashboard">
+    <a class="active app-link">Admin Center</a>
   </li>
 </ul>
-
 <div class="row">
   <div class="col-sm-2">
-    <div class="panel panel-default app-card app-card-2x bg-success" routerLink="/admin/configure-objects">
-      <div class="panel-body text-white text-center">
-        <div class="app-card-heading" style="margin-top: 100px;">
-          Object Definitions
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-2">
-    <div class="panel panel-default app-card app-card-2x bg-danger" routerLink="/admin/manage-objects">
-      <div class="panel-body text-white text-center">
-        <div class="app-card-heading"  style="margin-top: 100px;">
-          Manage Objects
+    <div class="panel panel-default bg-success app-tile" routerLink="/admin/manage">
+     <div class="panel-body text-white text-center">
+        <div class="app-tile-heading" style="margin-top: 110px;">
+          Manage Data
         </div>
       </div>
     </div>
   </div>
 </div>
-

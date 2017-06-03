@@ -1,0 +1,71 @@
+<!-- BreadCrumb starts -->
+<ul class="breadcrumb">
+  <li routerLink="/dashboard">
+    <a class="app-link">DashBoard</a>
+  </li>
+  <li routerLink="/admin/dashboard">
+    <a class="app-link">Admin Center</a>
+  </li>
+  <li routerLink="/admin/manage">
+    <a class="active app-link">Manage Data</a>
+  </li>
+</ul>
+<!-- BreadCrumb ends -->
+
+<!-- Body starts -->
+<div class="row">
+  <!-- Form Starts -->
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form role="form">
+    
+    <div class="form-group form-group-default ">
+        <label>Project</label>
+        <input type="email" class="form-control" required>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group form-group-default">
+                <label>First name</label>
+                <input type="text" class="form-control" required>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group form-group-default">
+                <label>Last name</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group form-group-default">
+        <label>Password</label>
+        <input type="password" class="form-control" required>
+    </div>
+
+    <div class="form-group form-group-default">
+        <label>Placeholder</label>
+        <input type="email" class="form-control" placeholder="ex: some@example.com" required>
+    </div>
+
+    <div class="form-group form-group-default disabled">
+        <label>Disabled</label>
+        <input type="email" class="form-control" value="You can put anything here" disabled>
+    </div>
+</form>
+      </div>
+    </div>
+  </div>
+  <!-- Form Ends -->
+
+  <!-- Object Listing Starts -->
+  <div class="col-sm-8">
+    <!-- Search Bar Starts-->
+    <app-search-bar></app-search-bar>
+    <!-- Search Bar Ends-->
+  </div>
+  <!-- Object Listing Ends -->
+</div>
+<!-- Body Ends -->

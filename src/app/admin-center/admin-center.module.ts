@@ -1,16 +1,18 @@
+import { SharedModule } from './../shared/shared.module';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminRoutingModule } from './admin-routing.module';
+import { ManageDataComponent } from './manage-data/manage-data.component';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { ManageObjectsComponent } from './manage-objects/manage-objects.component';
-import { ConfigureObjectsComponent } from './configure-objects/configure-objects.component';
-import { AdminRoutingModule } from './admin-routing.module';
+import { ManageDepartmentComponent } from './manage-department/manage-department.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    SharedModule
   ],
-  declarations: [AdminDashboardComponent, ManageObjectsComponent, ConfigureObjectsComponent]
+  declarations: [AdminDashboardComponent, ManageDataComponent, ManageDepartmentComponent]
 })
 export class AdminCenterModule { }

@@ -1,20 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-.app-card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    cursor: pointer;
-}
-.app-card-2x {
-    height: 200px;
-}
-.app-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-.app-card-heading {
-    font-weight: 600;
-    font-size: 14pt;
-    line-height: 23pt;
-    
-}
 .app-link {
     cursor: pointer
 }
@@ -24,4 +8,23 @@
     width: 100%;
     font-size: 14pt;
     font-weight: 600;
+}
+.app-tile {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+    cursor: pointer;
+    height: 190px;
+}
+.app-tile:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+}
+.app-tile-heading {
+    font-weight: 600;
+    font-size: 14pt;
+    line-height: 23pt;
+}
+.app-floter {
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.app-floter:hover {
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
 }
