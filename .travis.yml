@@ -3,23 +3,12 @@ dist: trusty
 language: node_js
 node_js:
 - 7
-addons: 
-apt:
-  sources:
-  - google-chrome
-  packages:
-  - google-chrome-stable
-  - google-chrome-beta
-before_install:
-- export CHROME_BIN=chromium-browser
-- export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
+
 before_script:
 - npm install -g @angular/cli
-- npm install -g karma
 - npm install
 - ng build
-script: karma start karma.conf.js --single-run
+
 notifications:
   slack:
     secure: Uw4KCWnsa0fGMe9ZMaSwD3hkV7nzZaA7bHh7RNlf54kIm1P1ojmZ4w1/oyjfOjYHp7kxHzKAP+FahTgc3NhlTbMDRUrlkCgWRfK9Jywf7LNmBDMOGMLNUdGDl0rF19VkpshBZUhjrBt3cwHY/o+L5vBPTfbe7cQ9A8HARSu2LXTZoTjMWhdwaZmkwbgAF3Qr5odYFFuAHjiR9nQTtGwkfbsZdvJ+ZrbQytKWjS6nRt9KDmgRf0nJqJawwl4lzJSm2hctOC4Ps9zY2SxvHVpyFWCufuUN0Vmye7mkx80fO9Uix+A55jiyozMVn5wK7cDdCl2t1NjRiot1wtNYZucRVmYZxK32BgMJnvz9zG2oYq+0jisCBjJuPeQ6xwHvk3Wh7EimMbtl+YQRCdOe5PIosGLv+fKPJR7n0kugdLQpwGnIHn0s8XJZ029EbM7EL2L9dLlFtzYh8xDST7iCy/cbo6KA23GQwWNNXDQH4feqwphM8RPt57+YHdegkZg0yHYzugcYyGGPoe4psIMvhCWJ4rkc20X8s1HeVJrWM0B14n8oQvt83ayb7c8W3FytHeVQoOLwNly87P/GLCQXvkMyxL8EsX14zfm9a5pnEECaN4hs9Fa9O8Gsn2tQYJUped3TMEr+T2M4USsFPKNn0wHJlS3PVmiwMVV/qbXfopmts9M=
