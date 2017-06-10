@@ -1,3 +1,4 @@
+import { ExamHomeComponent } from './examination/exam-home/exam-home.component';
 import { ManageDepartmentComponent } from './admin-center/manage-department/manage-department.component';
 import { ManageDataComponent } from './admin-center/manage-data/manage-data.component';
 import { AdminDashboardComponent } from './admin-center/admin-dashboard/admin-dashboard.component';
@@ -13,7 +14,8 @@ const appRoutes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'admin/dashboard', component: AdminDashboardComponent},
   {path: 'admin/manage', component: ManageDataComponent},
-   {path: 'admin/manage/department', component: ManageDepartmentComponent},
+  {path: 'admin/manage/department', component: ManageDepartmentComponent},
+  {path: 'examination', component: ExamHomeComponent},
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: '**', component: NotFoundComponent}
 ];
