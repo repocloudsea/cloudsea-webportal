@@ -25,24 +25,24 @@
       </div>
       <div class="panel-body">
         <br/>
-        <form role="form" novalidate>
+        <form #departmenForm="ngForm" (ngSubmit)="save(); departmenForm.reset()" role="form" novalidate>
             <div class="form-group form-group-default ">
                 <label>Name</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" name="name" [(ngModel)]="department.name" required>
             </div>
             <div class="form-group form-group-default ">
                 <label>Code</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" name="code" [(ngModel)]="department.code" required>
             </div>
             <div class="form-group form-group-default ">
                 <label>Effective From</label>
                 <input type="text" class="form-control" required>
             </div>
             <div class="p-t-10">
-                <button class="btn btn-cons pull-left">
+                <button type="reset" class="btn btn-cons pull-left" (click)="cancel(); departmenForm.reset()">
                     <span>Cancel</span>
                 </button>
-                <button class="btn btn-cons btn-success btn-animated from-top fa fa-check pull-right">
+                <button type="submit" class="btn btn-cons btn-success btn-animated from-top fa fa-check pull-right">
                     <span>Save</span>
                 </button>
             </div>
@@ -54,92 +54,31 @@
 
   <div class="col-sm-8">
     <!-- Search Bar Starts-->
-    <app-search-bar></app-search-bar>
+    <app-search-bar (onFiltered)="doSearch($event)"></app-search-bar>
     <!-- Search Bar Ends-->
 
     <!-- Object Listing Starts -->
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4" [@flyInOut]="'in'"
+             *ngFor="let department of departments | filterBy:'name':searchCriteria; trackBy: trackByCode">
             <div class="panel panel-default panel-condensed">
                 <div class="panel-heading">
-                    <div class="panel-title">FM00X1</div>
+                    <div class="panel-title">{{department.code}}</div>
                     <div class="pull-right panel-title">
-                        <span class="app-pointer"><i class="fa fa-pencil fa-lg p-r-10"></i></span>
-                        <span class="app-pointer"><i class="fa fa-trash-o fa-lg"></i></span>
+                        <span class="app-pointer" (click)="edit(department)"><i class="fa fa-pencil fa-lg p-r-10"></i></span>
+                        <span class="app-pointer" (click)="delete(department)"><i class="fa fa-trash-o fa-lg"></i></span>
                     </div>
                 </div>
                 <div class="panel-body">
                     <div class="thumbnail-wrapper d39 circular bg-danger text-white inline">
-                        <div class="bold">F</div>
+                        <div class="bold">{{trimFirstCapAlpha(department.name)}}</div>
                     </div>
                     <div class="p-l-15 p-t-10 inline">
-                        <span class="semi-bold fs-14">Finance Management</span>
+                        <span class="semi-bold fs-14">{{department.name}}</span>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- TODO: Need to Remove-->
-        <div class="col-sm-4">
-            <div class="panel panel-default panel-condensed">
-                <div class="panel-heading">
-                    <div class="panel-title">FM00X1</div>
-                    <div class="pull-right panel-title">
-                        <span class="app-pointer"><i class="fa fa-pencil fa-lg p-r-10"></i></span>
-                        <span class="app-pointer"><i class="fa fa-trash-o fa-lg"></i></span>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <div class="thumbnail-wrapper d39 circular bg-danger text-white inline">
-                        <div class="bold">H</div>
-                    </div>
-                    <div class="p-l-15 p-t-10 inline">
-                        <span class="semi-bold fs-14">Human Resource</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4">
-            <div class="panel panel-default panel-condensed">
-                <div class="panel-heading">
-                    <div class="panel-title">FM00X1</div>
-                    <div class="pull-right panel-title">
-                        <span class="app-pointer"><i class="fa fa-pencil fa-lg p-r-10"></i></span>
-                        <span class="app-pointer"><i class="fa fa-trash-o fa-lg"></i></span>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <div class="thumbnail-wrapper d39 circular bg-danger text-white inline">
-                        <div class="bold">F</div>
-                    </div>
-                    <div class="p-l-15 p-t-10 inline">
-                        <span class="semi-bold fs-14">Finance Management</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4">
-            <div class="panel panel-default panel-condensed">
-                <div class="panel-heading">
-                    <div class="panel-title">FM00X1</div>
-                    <div class="pull-right panel-title">
-                        <span class="app-pointer"><i class="fa fa-pencil fa-lg p-r-10"></i></span>
-                        <span class="app-pointer"><i class="fa fa-trash-o fa-lg"></i></span>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <div class="thumbnail-wrapper d39 circular bg-danger text-white inline">
-                        <div class="bold">H</div>
-                    </div>
-                    <div class="p-l-15 p-t-10 inline">
-                        <span class="semi-bold fs-14">Human Resource</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- TODO: Need to Remove-->
     </div>
     <!-- Object Listing Ends -->
   </div>

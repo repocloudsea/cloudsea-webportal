@@ -16,64 +16,22 @@
 <div class="row m-t-20">
   <div class="col-sm-3"></div>
   <div class="col-sm-6">
-    <app-search-bar></app-search-bar>
+    <app-search-bar (onFiltered)="doSearch($event)"></app-search-bar>
   </div>
   <div class="col-sm-3"></div>
 </div>
 
 <!-- Object Listing Starts-->
 <div class="row">
-  <!-- Branch -->
-  <div class="col-sm-3">
-    <div class="panel panel-transparent">
+  <div class="col-sm-3" [@flyInOut]="'in'"
+       *ngFor="let businessObj of businessObjects | filterBy:'label':searchCriteria; trackBy: trackById">
+    <div class="panel panel-transparent" [routerLink]="['/admin/manage', businessObj.viewState]">
       <div class="panel-body">
         <div class="thumbnail-wrapper d48 circular bg-success text-white inline app-pointer">
-          <div class="bold">B</div>
+          <div class="bold">{{trimFirstCapAlpha(businessObj.label)}}</div>
         </div>
         <div class="p-l-15 inline">
-          <h5 class="m-b-5 app-pointer"><span class="semi-bold">Branch</span></h5>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Department -->
-  <div class="col-sm-3">
-    <div class="panel panel-transparent" routerLink="/admin/manage/department">
-      <div class="panel-body">
-        <div class="thumbnail-wrapper d48 circular bg-success text-white inline app-pointer">
-          <div class="bold">D</div>
-        </div>
-        <div class="p-l-15 inline">
-          <h5 class="m-b-5 app-pointer"><span class="semi-bold">Department</span></h5>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Division -->
-  <div class="col-sm-3">
-    <div class="panel panel-transparent">
-      <div class="panel-body">
-        <div class="thumbnail-wrapper d48 circular bg-success text-white inline app-pointer">
-          <div class="bold">D</div>
-        </div>
-        <div class="p-l-15 inline">
-          <h5 class="m-b-5 app-pointer"><span class="semi-bold">Division</span></h5>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Subject -->
-  <div class="col-sm-3">
-    <div class="panel panel-transparent">
-      <div class="panel-body">
-        <div class="thumbnail-wrapper d48 circular bg-success text-white inline app-pointer">
-          <div class="bold">S</div>
-        </div>
-        <div class="p-l-15 inline">
-          <h5 class="m-b-5 app-pointer"><span class="semi-bold">Subject</span></h5>
+          <h5 class="m-b-5 app-pointer"><span class="semi-bold">{{businessObj.label}}</span></h5>
         </div>
       </div>
     </div>

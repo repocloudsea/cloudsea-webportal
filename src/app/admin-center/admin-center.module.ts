@@ -6,10 +6,12 @@ import { ManageDataComponent } from './manage-data/manage-data.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ManageDepartmentComponent } from './manage-department/manage-department.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     AdminRoutingModule,
     SharedModule
   ],

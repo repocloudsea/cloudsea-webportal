@@ -1,0 +1,26 @@
+[
+  {
+    "id": "123",
+    "name": "department",
+    "label": "Department",
+    "viewState": "department"
+  },
+  {
+    "id": "456",
+    "name": "branch",
+    "label": "Branch",
+    "viewState": "branch"
+  },
+  {
+    "id": "123",
+    "name": "division",
+    "label": "Division",
+    "viewState": "division"
+  },
+  {
+    "id": "123",
+    "name": "subject",
+    "label": "Subject",
+    "viewState": "subject"
+  }
+]

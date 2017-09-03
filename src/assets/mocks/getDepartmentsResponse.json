@@ -1,0 +1,17 @@
+[
+  {
+    "id": "123",
+    "name": "Finance Management",
+    "code": "FM00X1"
+  },
+  {
+    "id": "456",
+    "name": "Human Resource",
+    "code": "FM00X2"
+  },
+  {
+    "id": "789",
+    "name": "Information Technology",
+    "code": "FM00X3"
+  }
+]

@@ -7,7 +7,7 @@
           </div>
         </div>
         <div class="col-xs-10">
-          <input class="app-card-search">
+          <input name="search" class="app-card-search" #search (keyup)="doSearch(search.value)">
         </div>
       </div>
     </div>
