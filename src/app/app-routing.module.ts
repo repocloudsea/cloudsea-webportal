@@ -4,7 +4,7 @@ import { ManageDataComponent } from './admin-center/manage-data/manage-data.comp
 import { AdminDashboardComponent } from './admin-center/admin-dashboard/admin-dashboard.component';
 import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { NotFoundComponent } from './core/errors/not-found/not-found.component';
-import { AppComponent } from './app.component';
+import {ProfileComponent} from './core/profile/profile.component';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,6 +16,7 @@ const appRoutes: Routes = [
   {path: 'admin/manage', component: ManageDataComponent},
   {path: 'admin/manage/department', component: ManageDepartmentComponent},
   {path: 'examination', component: ExamHomeComponent},
+  {path: 'profile', component: ProfileComponent},
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: '**', component: NotFoundComponent}
 ];

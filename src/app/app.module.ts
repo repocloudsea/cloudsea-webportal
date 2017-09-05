@@ -22,6 +22,7 @@ import { NotFoundComponent } from './core/errors/not-found/not-found.component';
 import { HeaderComponent } from './core/header/header.component';
 import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { ProfileComponent } from './core/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FooterComponent } from './core/footer/footer.component';
     NotFoundComponent,
     HeaderComponent,
     DashboardComponent,
-    FooterComponent
+    FooterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
