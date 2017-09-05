@@ -1,86 +1,88 @@
-<!-- BreadCrumb starts -->
-<ul class="breadcrumb">
-  <li routerLink="/dashboard">
-    <a class="app-link">DashBoard</a>
-  </li>
-  <li routerLink="/admin/dashboard">
-    <a class="app-link">Admin Center</a>
-  </li>
-  <li routerLink="/admin/manage">
-    <a class="app-link">Manage Data</a>
-  </li>
-  <li routerLink="/admin/manage/department">
-    <a class="active app-link">Manage Department</a>
-  </li>
-</ul>
-<!-- BreadCrumb ends -->
+<div class="container-fluid container-fixed-lg">
+  <!-- BreadCrumb starts -->
+  <ul class="breadcrumb">
+    <li routerLink="/dashboard">
+      <a class="app-link">DashBoard</a>
+    </li>
+    <li routerLink="/admin/dashboard">
+      <a class="app-link">Admin Center</a>
+    </li>
+    <li routerLink="/admin/manage">
+      <a class="app-link">Manage Data</a>
+    </li>
+    <li routerLink="/admin/manage/department">
+      <a class="active app-link">Manage Department</a>
+    </li>
+  </ul>
+  <!-- BreadCrumb ends -->
 
-<!-- Body starts -->
-<div class="row">
-  <!-- Form Starts -->
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-heading separator">
-        <div class="panel-title">Add Department</div>
-      </div>
-      <div class="panel-body">
-        <br/>
-        <form #departmenForm="ngForm" (ngSubmit)="save(); departmenForm.reset()" role="form" novalidate>
+  <!-- Body starts -->
+  <div class="row">
+    <!-- Form Starts -->
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-heading separator">
+          <div class="panel-title">Add Department</div>
+        </div>
+        <div class="panel-body">
+          <br/>
+          <form #departmenForm="ngForm" (ngSubmit)="save(); departmenForm.reset()" role="form" novalidate>
             <div class="form-group form-group-default ">
-                <label>Name</label>
-                <input type="text" class="form-control" name="name" [(ngModel)]="department.name" required>
+              <label>Name</label>
+              <input type="text" class="form-control" name="name" [(ngModel)]="department.name" required>
             </div>
             <div class="form-group form-group-default ">
-                <label>Code</label>
-                <input type="text" class="form-control" name="code" [(ngModel)]="department.code" required>
+              <label>Code</label>
+              <input type="text" class="form-control" name="code" [(ngModel)]="department.code" required>
             </div>
             <div class="form-group form-group-default ">
-                <label>Effective From</label>
-                <input type="text" class="form-control" required>
+              <label>Effective From</label>
+              <input type="text" class="form-control" required>
             </div>
             <div class="p-t-10">
-                <button type="reset" class="btn btn-cons pull-left" (click)="cancel(); departmenForm.reset()">
-                    <span>Cancel</span>
-                </button>
-                <button type="submit" class="btn btn-cons btn-success btn-animated from-top fa fa-check pull-right">
-                    <span>Save</span>
-                </button>
+              <button type="reset" class="btn btn-cons pull-left" (click)="cancel(); departmenForm.reset()">
+                <span>Cancel</span>
+              </button>
+              <button type="submit" class="btn btn-cons btn-success btn-animated from-top fa fa-check pull-right">
+                <span>Save</span>
+              </button>
             </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Form Ends -->
+    <!-- Form Ends -->
 
-  <div class="col-sm-8">
-    <!-- Search Bar Starts-->
-    <app-search-bar (onFiltered)="doSearch($event)"></app-search-bar>
-    <!-- Search Bar Ends-->
+    <div class="col-sm-8">
+      <!-- Search Bar Starts-->
+      <app-search-bar (onFiltered)="doSearch($event)"></app-search-bar>
+      <!-- Search Bar Ends-->
 
-    <!-- Object Listing Starts -->
-    <div class="row">
+      <!-- Object Listing Starts -->
+      <div class="row">
         <div class="col-sm-4" [@flyInOut]="'in'"
              *ngFor="let department of departments | filterBy:'name':searchCriteria; trackBy: trackByCode">
-            <div class="panel panel-default panel-condensed">
-                <div class="panel-heading">
-                    <div class="panel-title">{{department.code}}</div>
-                    <div class="pull-right panel-title">
-                        <span class="app-pointer" (click)="edit(department)"><i class="fa fa-pencil fa-lg p-r-10"></i></span>
-                        <span class="app-pointer" (click)="delete(department)"><i class="fa fa-trash-o fa-lg"></i></span>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <div class="thumbnail-wrapper d39 circular bg-danger text-white inline">
-                        <div class="bold">{{trimFirstCapAlpha(department.name)}}</div>
-                    </div>
-                    <div class="p-l-15 p-t-10 inline">
-                        <span class="semi-bold fs-14">{{department.name}}</span>
-                    </div>
-                </div>
+          <div class="panel panel-default panel-condensed">
+            <div class="panel-heading">
+              <div class="panel-title">{{department.code}}</div>
+              <div class="pull-right panel-title">
+                <span class="app-pointer" (click)="edit(department)"><i class="fa fa-pencil fa-lg p-r-10"></i></span>
+                <span class="app-pointer" (click)="delete(department)"><i class="fa fa-trash-o fa-lg"></i></span>
+              </div>
             </div>
+            <div class="panel-body">
+              <div class="thumbnail-wrapper d39 circular bg-danger text-white inline">
+                <div class="bold">{{trimFirstCapAlpha(department.name)}}</div>
+              </div>
+              <div class="p-l-15 p-t-10 inline">
+                <span class="semi-bold fs-14">{{department.name}}</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <!-- Object Listing Ends -->
     </div>
-    <!-- Object Listing Ends -->
   </div>
+  <!-- Body Ends -->
 </div>
-<!-- Body Ends -->

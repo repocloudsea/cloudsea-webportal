@@ -1,84 +1,86 @@
-<ul class="breadcrumb">
-  <li class="app-link" routerLink="/dashboard">
-    <p>DashBoard</p>
-  </li>
-  <li routerLink="/examination">
-    <a class="active app-link">Examination Home</a>
-  </li>
-</ul>
+<div class="container-fluid container-fixed-lg">
+  <ul class="breadcrumb">
+    <li class="app-link" routerLink="/dashboard">
+      <p>DashBoard</p>
+    </li>
+    <li routerLink="/examination">
+      <a class="active app-link">Examination Home</a>
+    </li>
+  </ul>
 
-<div class="row">
-  <div class="search-filters b-b m-b-30 p-t-10 p-b-10">
-    <div class="bold m-r-10 inline">Category: </div>
-    <a *ngFor="let category of categories" class="label label-default m-r-5">{{category.category}}</a>
+  <div class="row">
+    <div class="search-filters b-b m-b-30 p-t-10 p-b-10">
+      <div class="bold m-r-10 inline">Category: </div>
+      <a *ngFor="let category of categories" class="label label-default m-r-5">{{category.category}}</a>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-md-3" *ngFor="let exam of exams; let i = index">
-    <div id="myPortlet-{{i}}" class="panel panel-default">
-      <div class="panel-heading ">
-        <div class="panel-title">
-          {{exam.name}}
-        </div>
-        <div class="panel-controls">
-          <ul>
-            <li>
-              <div class="dropdown">
-                <a id="portlet-settings" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let exam of exams; let i = index">
+      <div id="myPortlet-{{i}}" class="panel panel-default">
+        <div class="panel-heading ">
+          <div class="panel-title">
+            {{exam.name}}
+          </div>
+          <div class="panel-controls">
+            <ul>
+              <li>
+                <div class="dropdown">
+                  <a id="portlet-settings" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
                     <i class="fa fa-cog"></i>
-                </a>
+                  </a>
 
-                <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="portlet-settings">
-                  <li><a href="#">Edit</a></li>
-                  <li><a href="#">Delete</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+                  <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="portlet-settings">
+                    <li><a href="#">Edit</a></li>
+                    <li><a href="#">Delete</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="panel-body">
-        <p>{{exam.description}}</p>
-        <span class="label label-default">{{exam.category}}</span>
-        <div class="exam-duration m-t-20">
-          <span class="bold"><i class="fa fa-clock-o"></i> </span>
-          <span>{{exam.duration}} mins</span>
+        <div class="panel-body">
+          <p>{{exam.description}}</p>
+          <span class="label label-default">{{exam.category}}</span>
+          <div class="exam-duration m-t-20">
+            <span class="bold"><i class="fa fa-clock-o"></i> </span>
+            <span>{{exam.duration}} mins</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!--<div class="row">
+    <div class="col-sm-2">
+      <div class="panel panel-default bg-success app-tile" routerLink="/examination/create">
+       <div class="panel-body text-white text-center">
+         <i class="fa fa-plus"></i>
+          <div class="app-tile-heading" style="margin-top: 110px;">
+            Create Exam
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="panel panel-default bg-success app-tile" routerLink="/examination/create">
+       <div class="panel-body text-white text-center">
+          <div class="app-tile-heading" style="margin-top: 110px;">
+            Upload Exam
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="panel panel-default bg-success app-tile" routerLink="/examination/create">
+       <div class="panel-body text-white text-center">
+          <div class="app-tile-heading" style="margin-top: 110px;">
+            View Exam
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
 </div>
-
-<!--<div class="row">
-  <div class="col-sm-2">
-    <div class="panel panel-default bg-success app-tile" routerLink="/examination/create">
-     <div class="panel-body text-white text-center">
-       <i class="fa fa-plus"></i>
-        <div class="app-tile-heading" style="margin-top: 110px;">
-          Create Exam
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-2">
-    <div class="panel panel-default bg-success app-tile" routerLink="/examination/create">
-     <div class="panel-body text-white text-center">
-        <div class="app-tile-heading" style="margin-top: 110px;">
-          Upload Exam
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-2">
-    <div class="panel panel-default bg-success app-tile" routerLink="/examination/create">
-     <div class="panel-body text-white text-center">
-        <div class="app-tile-heading" style="margin-top: 110px;">
-          View Exam
-        </div>
-      </div>
-    </div>
-  </div>
-</div>-->

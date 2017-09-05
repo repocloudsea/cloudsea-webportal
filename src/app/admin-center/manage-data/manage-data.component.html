@@ -1,41 +1,44 @@
-<!-- BreadCrumb starts -->
-<ul class="breadcrumb">
-  <li routerLink="/dashboard">
-    <a class="app-link">DashBoard</a>
-  </li>
-  <li routerLink="/admin/dashboard">
-    <a class="app-link">Admin Center</a>
-  </li>
-  <li routerLink="/admin/manage">
-    <a class="active app-link">Manage Data</a>
-  </li>
-</ul>
-<!-- BreadCrumb ends -->
+<div class="container-fluid container-fixed-lg">
+  <!-- BreadCrumb starts -->
+  <ul class="breadcrumb">
+    <li routerLink="/dashboard">
+      <a class="app-link">DashBoard</a>
+    </li>
+    <li routerLink="/admin/dashboard">
+      <a class="app-link">Admin Center</a>
+    </li>
+    <li routerLink="/admin/manage">
+      <a class="active app-link">Manage Data</a>
+    </li>
+  </ul>
+  <!-- BreadCrumb ends -->
 
-<!-- Body starts -->
-<div class="row m-t-20">
-  <div class="col-sm-3"></div>
-  <div class="col-sm-6">
-    <app-search-bar (onFiltered)="doSearch($event)"></app-search-bar>
+  <!-- Body starts -->
+  <div class="row m-t-20">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <app-search-bar (onFiltered)="doSearch($event)"></app-search-bar>
+    </div>
+    <div class="col-sm-3"></div>
   </div>
-  <div class="col-sm-3"></div>
-</div>
 
-<!-- Object Listing Starts-->
-<div class="row">
-  <div class="col-sm-3" [@flyInOut]="'in'"
-       *ngFor="let businessObj of businessObjects | filterBy:'label':searchCriteria; trackBy: trackById">
-    <div class="panel panel-transparent" [routerLink]="['/admin/manage', businessObj.viewState]">
-      <div class="panel-body">
-        <div class="thumbnail-wrapper d48 circular bg-success text-white inline app-pointer">
-          <div class="bold">{{trimFirstCapAlpha(businessObj.label)}}</div>
-        </div>
-        <div class="p-l-15 inline">
-          <h5 class="m-b-5 app-pointer"><span class="semi-bold">{{businessObj.label}}</span></h5>
+  <!-- Object Listing Starts-->
+  <div class="row">
+    <div class="col-sm-3" [@flyInOut]="'in'"
+         *ngFor="let businessObj of businessObjects | filterBy:'label':searchCriteria; trackBy: trackById">
+      <div class="panel panel-transparent" [routerLink]="['/admin/manage', businessObj.viewState]">
+        <div class="panel-body">
+          <div class="thumbnail-wrapper d48 circular bg-success text-white inline app-pointer">
+            <div class="bold">{{trimFirstCapAlpha(businessObj.label)}}</div>
+          </div>
+          <div class="p-l-15 inline">
+            <h5 class="m-b-5 app-pointer"><span class="semi-bold">{{businessObj.label}}</span></h5>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- Object Listing Ends-->
+  <!-- Body Ends -->
 </div>
-<!-- Object Listing Ends-->
-<!-- Body Ends -->
+

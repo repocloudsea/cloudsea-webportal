@@ -13,6 +13,14 @@
           </li>
           <li routerLinkActive="active">
             <a href="#">
+              <span class="title">Profile</span>
+            </a>
+            <span class="icon-thumbnail app-link" routerLink="/profile">
+              <i class="fa fa-user"></i>
+            </span>
+          </li>
+          <li routerLinkActive="active">
+            <a href="#">
               <span class="title">Admin Center</span>
             </a>
             <span class="icon-thumbnail app-link" routerLink="/admin/dashboard">
@@ -43,11 +51,9 @@
       <div class="page-content-wrapper">
         <!-- START PAGE CONTENT -->
         <div class="content">
-          <div class="container-fluid container-fixed-lg">
-            <!-- BEGIN PlACE PAGE CONTENT HERE -->
-            <router-outlet></router-outlet>
-            <!-- END PLACE PAGE CONTENT HERE -->
-          </div>
+          <!-- BEGIN PlACE PAGE CONTENT HERE -->
+          <router-outlet></router-outlet>
+          <!-- END PLACE PAGE CONTENT HERE -->
         </div>
         <!-- END PAGE CONTENT -->
       </div>
