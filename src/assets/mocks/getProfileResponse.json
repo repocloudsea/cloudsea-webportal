@@ -1,0 +1,13 @@
+{
+  "firstName": "Daenerys",
+  "middleName": "",
+  "lastName": "Targaryen",
+  "address": "3A High Street",
+  "city": "Pune",
+  "state": "Maharashtra",
+  "pinCode": 123456,
+  "mobile": 9878456321,
+  "email": "dany.targaryen@gmail.com",
+  "class": "10th",
+  "section": "A"
+}

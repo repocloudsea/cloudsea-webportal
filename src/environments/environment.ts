@@ -8,5 +8,6 @@ export const environment = {
 
   /*These are Mock Service URLs*/
   getAllBusinessObjectsMock: 'assets/mocks/getBusinessObjectResponse.json',
-  getDepartmentsMock: 'assets/mocks/getDepartmentsResponse.json'
+  getDepartmentsMock: 'assets/mocks/getDepartmentsResponse.json',
+  getProfileMock: 'assets/mocks/getProfileResponse.json'
 };

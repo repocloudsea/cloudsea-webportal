@@ -5,6 +5,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FilterByPipe } from './pipes/filter-by.pipe';
 import {FormsModule} from '@angular/forms';
 import {CommonUtilsService} from './services/common-utils.service';
+import {UserProfileService} from './services/user.profile.service';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import {CommonUtilsService} from './services/common-utils.service';
   ],
   exports: [SearchBarComponent, FilterByPipe],
   declarations: [SearchBarComponent, FilterByPipe],
-  providers: [CommonUtilsService]
+  providers: [CommonUtilsService, UserProfileService]
 })
 export class SharedModule { }

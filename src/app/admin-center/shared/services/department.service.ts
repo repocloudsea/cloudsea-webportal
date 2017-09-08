@@ -18,7 +18,8 @@ export class DepartmentService {
       .map(this.extractData);
   }
 
-  private extractData(res: Response) {
-    return res.json() as Department[] || {};
+  /*This method returns object from service json response*/
+  extractData(res: Response) {
+    return res.json() || {};
   }
 }

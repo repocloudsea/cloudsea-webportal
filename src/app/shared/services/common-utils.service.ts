@@ -20,4 +20,9 @@ export class CommonUtilsService {
     const options = new RequestOptions({ headers: headers });
     return options;
   }
+
+  /*This method returns object from service json response*/
+  extractData(res: Response) {
+    return res.json() || {};
+  }
 }

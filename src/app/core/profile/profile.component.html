@@ -14,15 +14,113 @@
                    data-src="assets/imgs/profile.jpg" data-src-retina="assets/imgs/profile.jpg" width="180" height="180">
             </div>
             <div class="m-b-20">
-              <h2 class="text-white no-margin bold">Daenerys Targaryen</h2>
-              <h5 class="text-white no-margin">Class 10th | Section A</h5>
-              <h5 class="text-white no-margin">dany.targaryen@gmail.com | +91-9876543210</h5>
+              <h3 class="text-white no-margin bold">{{user.firstName}}&nbsp; {{user.lastName}}</h3>
+              <h5 class="text-white no-margin">Class {{user.class}} | Section {{user.section}}</h5>
+              <h5 class="text-white no-margin">{{user.email}} | {{user.mobile}}</h5>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- END JUMBOTRON -->
+
+    <!-- START Feed-->
+    <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+      <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+          <!-- Basic Information section start -->
+          <div class="panel panel-default" data-pages="portlet">
+            <div class="panel-heading separator">
+              <div class="panel-title">Basic Information
+              </div>
+              <div class="panel-controls">
+                <ul>
+                  <li>
+                    <a class="portlet-close"><i class="fa fa-pencil"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="portlet-collapse" data-toggle="collapse"><i class="portlet-icon portlet-icon-collapse"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-body">
+              ...
+            </div>
+          </div>
+          <!-- Basic Information section end -->
+
+          <!-- Education section start -->
+          <div class="panel panel-default" data-pages="portlet">
+            <div class="panel-heading separator">
+              <div class="panel-title">Education
+              </div>
+              <div class="panel-controls">
+                <ul>
+                  <li>
+                    <a href="#" class="portlet-close"><i class="fa fa-pencil"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="portlet-collapse" data-toggle="collapse"><i class="portlet-icon portlet-icon-collapse"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-body">
+              ...
+            </div>
+          </div>
+          <!-- Education section end -->
+
+          <!-- Accomplishments section start -->
+          <div class="panel panel-default" data-pages="portlet">
+            <div class="panel-heading separator">
+              <div class="panel-title">Accomplishments
+              </div>
+              <div class="panel-controls">
+                <ul>
+                  <li>
+                    <a href="#" class="portlet-close"><i class="fa fa-pencil"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="portlet-collapse" data-toggle="collapse"><i class="portlet-icon portlet-icon-collapse"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-body">
+              ...
+            </div>
+          </div>
+          <!-- Accomplishments section end -->
+
+          <!-- Interests & Activities section start -->
+          <div class="panel panel-default" data-pages="portlet">
+            <div class="panel-heading separator">
+              <div class="panel-title">Interests & Activities
+              </div>
+              <div class="panel-controls">
+                <ul>
+                  <li>
+                    <a href="#" class="portlet-close"><i class="fa fa-pencil"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="portlet-collapse" data-toggle="collapse"><i class="portlet-icon portlet-icon-collapse"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-body">
+              ...
+            </div>
+          </div>
+          <!-- Interests & Activities section end -->
+        </div>
+        <div class="col-xs-2"></div>
+      </div>
+    </div>
+    <!-- END Feed-->
   </div>
 </div>
 <!--Body ends-->
